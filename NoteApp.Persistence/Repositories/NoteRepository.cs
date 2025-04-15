@@ -48,4 +48,19 @@ public class NoteRepository : INoteRepository
         _context.Notes.Remove(note);
         await _context.SaveChangesAsync();
     }
+    
+    public async Task<(List<Note> Notes, int TotalCount)> GetPagedAsync(int pageNumber, int pageSize)
+    {
+        var totalCount = await _context.Notes.CountAsync();
+        
+        var notes = await _context.Notes
+            .Include(n => n.Category)
+            .Include(n => n.Ratings)
+            .OrderByDescending(n => n.CreatedDate) // Most recent first
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+            
+        return (notes, totalCount);
+    }
 }

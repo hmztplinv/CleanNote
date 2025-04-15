@@ -12,7 +12,7 @@ using NoteApp.Persistence.Contexts;
 namespace NoteApp.Persistence.Migrations
 {
     [DbContext(typeof(NoteAppDbContext))]
-    [Migration("20250409133439_InitialCreate")]
+    [Migration("20250415163512_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

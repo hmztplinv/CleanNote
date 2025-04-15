@@ -9,4 +9,6 @@ public interface INoteRepository
     Task AddAsync(Note note);
     Task UpdateAsync(Note note);
     Task DeleteAsync(Note note);
+
+    Task<(List<Note> Notes, int TotalCount)> GetPagedAsync(int pageNumber, int pageSize);
 }
