@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NoteApp.Persistence.Contexts;
 
@@ -11,9 +12,11 @@ using NoteApp.Persistence.Contexts;
 namespace NoteApp.Persistence.Migrations
 {
     [DbContext(typeof(NoteAppDbContext))]
-    partial class NoteAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250415181542_AddAuth")]
+    partial class AddAuth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

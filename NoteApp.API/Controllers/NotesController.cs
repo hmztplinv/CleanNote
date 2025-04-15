@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NoteApp.Application.Features.Notes.Commands;
 using NoteApp.Application.Features.Notes.Queries;
@@ -8,6 +9,7 @@ namespace NoteApp.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize] // Yetkilendirme eklendi
 public class NotesController : ControllerBase
 {
     private readonly IMediator _mediator;

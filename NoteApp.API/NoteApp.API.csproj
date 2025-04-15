@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NoteApp.Persistence\NoteApp.Persistence.csproj" />
     <ProjectReference Include="..\NoteApp.Application\NoteApp.Application.csproj" />
+    <ProjectReference Include="..\NoteApp.Infrastructure\NoteApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
