@@ -1,0 +1,59 @@
+# .NET build files
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Rider (JetBrains) veya VS için ekstra
+.idea/
+*.DotSettings.user
+
+# NuGet paketleri (genelde restore edilir)
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Logs
+*.log
+Logs/
+
+# ASP.NET temporary files
+**/App_Data/Temp/
+
+# Test sonuçları
+TestResults/
+
+# Database files
+*.mdf
+*.ldf
+
+# Publish çıktısı
+publish/
+*.publishsettings
+
+# Environment dosyaları (dikkatli kullan)
+.env
+.env.*
+
+# Secrets (local secret storage)
+secrets.json
+
+# Backup dosyaları
+*.bak
+*.swp
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
